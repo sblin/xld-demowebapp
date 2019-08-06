@@ -25,13 +25,12 @@
                         <phase>pre-integration-test</phase>
                         <goals>
                             <goal>deploy</goal>
-                            <goal>import</goal>
                         </goals>
                     </execution>
                 </executions>
                 <configuration>
                     <applicationName>PetPortal</applicationName>
-                    <packageVersion>3.6</packageVersion>
+                    <packageVersion>1.0</packageVersion>
                     <username>admin</username>
                     <password>xladmin</password>
                     <deployables>

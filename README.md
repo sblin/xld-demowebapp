@@ -1,9 +1,11 @@
 
-Simple Demo web app for XL Deploy.
+## Simple Demo web app for XL Deploy.
 
-In dar/pom.xml set the application name and the package version
+In dar/pom.xml set the application name and the package version:
+```
     <applicationName>PetPortal</applicationName>
-    <packageVersion>3.6</packageVersion>
+    <packageVersion>1.0</packageVersion>
+```
 
 Run the following command to deploy the dar file in your XL Deploy server:
 ```
