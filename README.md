@@ -5,4 +5,7 @@ In dar/pom.xml set the application name and the package version
     <applicationName>PetPortal</applicationName>
     <packageVersion>3.6</packageVersion>
 
-Run 'mvn clean package xldeploy:import' to deploy the dar file on the XL Deploy server.
+Run the following command to deploy the dar file in your XL Deploy server:
+```mvn clean package xldeploy:import
+```
+
