@@ -47,6 +47,10 @@
                             <password>{{datasource.password}}</password>
                         </tomcat.DataSourceSpec>
                         <sql.SqlScripts name="sql" location="sql"/>
+                        <smoketest.HttpRequestTest name="smokeTest">
+                            <url>{{smoke.test.url}}</url>
+                            <expectedResponseText>{{smoke.test.expectedResponse}}</expectedResponseText>
+                        </smoketest.HttpRequestTest>
                     </deployables>
                 </configuration>
             </plugin>
