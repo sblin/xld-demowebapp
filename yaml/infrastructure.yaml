@@ -7,7 +7,8 @@ spec:
   os: UNIX
   address: 192.168.78.2
   username: demo
-  password: !value "Infrastructure_host_dev_vm_password"
+  # password should be set in external file password: !value ref_key
+  password: admin
   children:
   - name: smokeTestRunner
     type: smoketest.Runner
@@ -23,6 +24,7 @@ spec:
   - name: mysql
     type: sql.MySqlClient
     username: admin
-    password: !value "Infrastructure_host_dev_vm_mysql_password"
+    # password should be set in external file password: !value ref_key
+    password: admin
     mySqlHome: /usr
     databaseName: demo
