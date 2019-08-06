@@ -9,7 +9,7 @@
     </parent>
     <artifactId>PetPortal</artifactId>
     <packaging>dar</packaging>
-    <version>3.0-CD-SNAPSHOT</version>
+    <version>1.0</version>
     <name>PetClinic XL Deploy DAR</name>
     <url>http://www.xebialabs.com</url>
     <build>
@@ -25,21 +25,26 @@
                         <phase>pre-integration-test</phase>
                         <goals>
                             <goal>deploy</goal>
+                            <goal>import</goal>
                         </goals>
                     </execution>
                 </executions>
-
                 <configuration>
+                    <applicationName>PetPortal</applicationName>
+                    <packageVersion>3.6</packageVersion>
+                    <username>admin</username>
+                    <password>xladmin</password>
                     <deployables>
                         <jee.War name="petclinic" groupId="com.xebialabs.xldeploy.demos" artifactId="PetClinic">
                             <scanPlaceholders>true</scanPlaceholders>
                         </jee.War>
                         <jee.War name="petclinic-backend" groupId="com.xebialabs.xldeploy.demos" artifactId="PetClinic-Backend"/>
                         <tomcat.DataSourceSpec name="petclinicDataSource">
-                            <jndiName>jdbc/pets</jndiName>
+                            <context>petclinic</context>
+                            <jndiName>jdbc/PetPortalDB</jndiName>
                             <driverClassName>com.mysql.jdbc.Driver</driverClassName>
                             <url>{{datasource.url}}</url>
-                            <username>{{datasource.login}}</username>
+                            <username>{{datasource.username}}</username>
                             <password>{{datasource.password}}</password>
                         </tomcat.DataSourceSpec>
                         <sql.SqlScripts name="sql" location="sql"/>
@@ -62,12 +67,6 @@
             <artifactId>PetClinic-Backend</artifactId>
             <version>1.2</version>
             <type>war</type>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.13</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
