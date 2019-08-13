@@ -40,16 +40,16 @@
                         <jee.War name="petclinic-backend" groupId="com.xebialabs.xldeploy.demos" artifactId="PetClinic-Backend"/>
                         <tomcat.DataSourceSpec name="petclinicDataSource">
                             <context>petclinic</context>
-                            <jndiName>jdbc/PetPortalDB</jndiName>
+                            <jndiName>mysql.jndi_name</jndiName>
                             <driverClassName>com.mysql.jdbc.Driver</driverClassName>
-                            <url>{{datasource.url}}</url>
-                            <username>{{datasource.username}}</username>
-                            <password>{{datasource.password}}</password>
+                            <url>{{mysql.url}}</url>
+                            <username>{{mysql.username}}</username>
+                            <password>{{mysql.password}}</password>
                         </tomcat.DataSourceSpec>
                         <sql.SqlScripts name="sql" location="sql"/>
                         <smoketest.HttpRequestTest name="smokeTest">
-                            <url>{{smoke.test.url}}</url>
-                            <expectedResponseText>{{smoke.test.expectedResponse}}</expectedResponseText>
+                            <url>{{smoketest.url}}</url>
+                            <expectedResponseText>{{smoketest.expectedResponse}}</expectedResponseText>
                         </smoketest.HttpRequestTest>
                     </deployables>
                 </configuration>

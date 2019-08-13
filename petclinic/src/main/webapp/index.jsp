@@ -13,7 +13,7 @@
 <img src="/petclinic/images/pets.png" align="right" style="position:relative;right:30px;">
 <p>&nbsp;</p>
 
-	<p>-- {{smoke.test.expectedResponse}} -- </p>
+	<p>-- {{smoketest.expectedResponse}} -- </p>
 
 <ul>
   <li><a href="/petclinic/findOwners.jsp">Find owner</a></li>
