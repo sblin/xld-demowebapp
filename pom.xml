@@ -3,14 +3,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.xebialabs.xldeploy.demos</groupId>
-    <artifactId>xldeploy-petclinic-parent</artifactId>
+    <artifactId>xldeploy-demowebapp-parent</artifactId>
     <version>1.0</version>
     <packaging>pom</packaging>
     <name>PetClinic XL Deploy Pom</name>
     <url>http://www.xebialabs.com</url>
     <modules>
-        <module>petclinic</module>
-        <module>petclinic-backend</module>
+        <module>demowebapp</module>
+        <module>demowebapp-backend</module>
         <module>dar</module>
     </modules>
 

@@ -4,10 +4,10 @@
 
     <parent>
         <groupId>com.xebialabs.xldeploy.demos</groupId>
-        <artifactId>xldeploy-petclinic-parent</artifactId>
+        <artifactId>xldeploy-demowebapp-parent</artifactId>
         <version>1.0</version>
     </parent>
-    <artifactId>PetPortal</artifactId>
+    <artifactId>demowebapp-portal</artifactId>
     <packaging>dar</packaging>
     <version>1.0</version>
     <name>PetClinic XL Deploy DAR</name>
@@ -29,28 +29,30 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <applicationName>PetPortal</applicationName>
+                    <applicationName>DemoWebApp</applicationName>
                     <packageVersion>1.0</packageVersion>
                     <username>admin</username>
-                    <password>xladmin</password>
+                    <password>admin</password>
                     <deployables>
-                        <jee.War name="petclinic" groupId="com.xebialabs.xldeploy.demos" artifactId="PetClinic">
+                        <jee.War name="demowebapp" groupId="com.xebialabs.xldeploy.demos" artifactId="demowebapp">
                             <scanPlaceholders>true</scanPlaceholders>
                         </jee.War>
-                        <jee.War name="petclinic-backend" groupId="com.xebialabs.xldeploy.demos" artifactId="PetClinic-Backend"/>
-                        <tomcat.DataSourceSpec name="petclinicDataSource">
-                            <context>petclinic</context>
+                        <jee.War name="demowebapp-backend" groupId="com.xebialabs.xldeploy.demos" artifactId="demowebapp-Backend"/>
+                        <tomcat.DataSourceSpec name="demowebappDataSource">
+                            <context>demowebapp</context>
                             <jndiName>mysql.jndi_name</jndiName>
                             <driverClassName>com.mysql.jdbc.Driver</driverClassName>
                             <url>{{mysql.url}}</url>
                             <username>{{mysql.username}}</username>
                             <password>{{mysql.password}}</password>
                         </tomcat.DataSourceSpec>
-                        <sql.SqlScripts name="sql" location="sql"/>
+                        <sql.SqlScripts name="sqldemowebapp" location="sql"/>
+                        <!--
                         <smoketest.HttpRequestTest name="smokeTest">
                             <url>{{smoketest.url}}</url>
                             <expectedResponseText>{{smoketest.expectedResponse}}</expectedResponseText>
                         </smoketest.HttpRequestTest>
+                        -->
                     </deployables>
                 </configuration>
             </plugin>
@@ -60,14 +62,14 @@
     <dependencies>
         <dependency>
             <groupId>com.xebialabs.xldeploy.demos</groupId>
-            <artifactId>PetClinic</artifactId>
+            <artifactId>demowebapp</artifactId>
             <version>1.0</version>
             <type>war</type>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.xebialabs.xldeploy.demos</groupId>
-            <artifactId>PetClinic-Backend</artifactId>
+            <artifactId>demowebapp-Backend</artifactId>
             <version>1.2</version>
             <type>war</type>
             <scope>provided</scope>
