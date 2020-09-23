@@ -8,9 +8,9 @@
         <version>1.0</version>
     </parent>
     <artifactId>demowebapp</artifactId>
-    <version>1.0</version>
+    <version>${version}</version>
     <packaging>war</packaging>
-    <name>PetClinic Maven Webapp</name>
+    <name>DemoWebApp Front</name>
     <url>http://www.xebialabs.com</url>
     <build>
         <finalName>demowebapp</finalName>

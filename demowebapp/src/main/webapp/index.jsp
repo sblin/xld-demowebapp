@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <link rel="stylesheet" href="styles/petclinic.css" type="text/css"/>
-  <title>PetClinic 1.0 :: a Spring Framework demonstration</title>
+  <title>PetClinic <%=System.getProperty('VERSION') %> :: a Spring Framework demonstration</title>
 </head>
 
 <body>

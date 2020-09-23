@@ -9,8 +9,8 @@
     </parent>
     <artifactId>demowebapp-portal</artifactId>
     <packaging>dar</packaging>
-    <version>1.0</version>
-    <name>PetClinic XL Deploy DAR</name>
+    <version>${version}</version>
+    <name>DemoWebApp XL Deploy DAR</name>
     <url>http://www.xebialabs.com</url>
     <build>
         <plugins>
@@ -30,7 +30,7 @@
                 </executions>
                 <configuration>
                     <applicationName>DemoWebApp</applicationName>
-                    <packageVersion>1.0</packageVersion>
+                    <packageVersion>${version}</packageVersion>
                     <username>admin</username>
                     <password>admin</password>
                     <deployables>
@@ -63,14 +63,14 @@
         <dependency>
             <groupId>com.xebialabs.xldeploy.demos</groupId>
             <artifactId>demowebapp</artifactId>
-            <version>1.0</version>
+            <version>${version}</version>
             <type>war</type>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.xebialabs.xldeploy.demos</groupId>
             <artifactId>demowebapp-Backend</artifactId>
-            <version>1.2</version>
+            <version>${version}</version>
             <type>war</type>
             <scope>provided</scope>
         </dependency>

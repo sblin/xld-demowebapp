@@ -4,15 +4,28 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.xebialabs.xldeploy.demos</groupId>
     <artifactId>xldeploy-demowebapp-parent</artifactId>
-    <version>1.0</version>
+    <version>${version}</version>
     <packaging>pom</packaging>
-    <name>PetClinic XL Deploy Pom</name>
+    <name>DemoWebApp Parent</name>
     <url>http://www.xebialabs.com</url>
+    
+    <properties>
+        <version>XL Deploy package version</version>
+    </properties>
+
     <modules>
         <module>demowebapp</module>
         <module>demowebapp-backend</module>
         <module>dar</module>
     </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.xebialabs.xldeploy</groupId>
+            <artifactId>xldeploy-maven-plugin</artifactId>
+            <version>6.0.0</version>
+        </dependency>
+	</dependencies>
 
     <pluginRepositories>
         <pluginRepository>

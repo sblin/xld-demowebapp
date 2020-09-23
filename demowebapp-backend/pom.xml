@@ -8,9 +8,9 @@
     <version>1.0</version>
   </parent>
   <artifactId>demowebapp-Backend</artifactId>
-  <version>1.2</version>
+  <version>${version}</version>
   <packaging>war</packaging>
-  <name>demowebapp-Backend</name>
+  <name>DemoWebApp Back</name>
   <url>http://maven.apache.org</url>
   <build>
     <finalName>demowebapp-Backend</finalName>
