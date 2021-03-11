@@ -12,6 +12,10 @@
     <packaging>war</packaging>
     <name>DemoWebApp Front</name>
     <url>http://www.xebialabs.com</url>
+    <properties>
+   <maven.compiler.source>1.6</maven.compiler.source>
+   <maven.compiler.target>1.6</maven.compiler.target>
+  </properties>
     <build>
         <finalName>demowebapp</finalName>
     </build>
